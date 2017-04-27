@@ -3,3 +3,4 @@ utils/env.js
 utils/generate_manifest.js
 utils/prepare.js
 utils/webserver.js
+build/*.js
