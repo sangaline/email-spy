@@ -4,6 +4,7 @@
   "description": "A web extension for finding email addresses for a domain.",
   "scripts": {
     "build": "node utils/build.js",
+    "lint": "eslint .",
     "start": "node utils/webserver.js"
   },
   "dependencies": {
@@ -12,6 +13,12 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-react-hmre": "^1.1.1",
     "css-loader": "^0.25.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
     "fs-extra": "^0.30.0",
     "html-webpack-plugin": "2.24.1",
     "react": "^15.3.2",
