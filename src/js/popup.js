@@ -1,9 +1,10 @@
-import "../css/popup.css";
-import Placeholder from "./popup/placeholder.jsx";
-import React from "react";
-import { render } from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
+
+import '../css/popup.css';
+import Placeholder from './popup/placeholder';
 
 render(
-  <Placeholder/>,
-  window.document.getElementById("app")
+  React.createElement(Placeholder),
+  window.document.getElementById('app'),
 );

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-export default class extends React.Component {
-  render () {
-    return <p>Placeholder</p>;
-  }
-};
+const Placeholder = () => (
+  <p>Placeholder</p>
+);
+
+export default Placeholder;
