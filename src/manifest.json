@@ -4,5 +4,8 @@
     "default_popup": "popup.html"
   },
   "manifest_version": 2,
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+    "https://duckduckgo.com/*"
+  ]
 }

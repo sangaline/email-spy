@@ -21,6 +21,7 @@
     "eslint-plugin-react": "^6.10.3",
     "fs-extra": "^0.30.0",
     "html-webpack-plugin": "2.24.1",
+    "json-loader": "^0.5.4",
     "style-loader": "^0.13.0",
     "webpack": "2.2.1",
     "webpack-dev-server": "^2.3.0",
@@ -28,6 +29,8 @@
   },
   "dependencies": {
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0"
   }
 }

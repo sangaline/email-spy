@@ -30,7 +30,16 @@ const options = {
         exclude: /node_modules/,
         loader: 'style-loader!css-loader',
       },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
+      },
     ],
+  },
+  node: {
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.css'],
