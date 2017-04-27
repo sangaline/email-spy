@@ -1,0 +1,24 @@
+{
+  "name": "email-spy",
+  "version": "0.0.1",
+  "description": "A web extension for finding email addresses for a domain.",
+  "scripts": {
+    "build": "node utils/build.js",
+    "start": "node utils/webserver.js"
+  },
+  "dependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "css-loader": "^0.25.0",
+    "fs-extra": "^0.30.0",
+    "html-webpack-plugin": "2.24.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "style-loader": "^0.13.0",
+    "webpack": "2.2.1",
+    "webpack-dev-server": "^2.3.0",
+    "write-file-webpack-plugin": "3.4.2"
+  }
+}
