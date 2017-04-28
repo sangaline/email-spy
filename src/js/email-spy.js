@@ -85,7 +85,7 @@ class EmailSpy {
 
         const nextRelativeUrl = Object.values(results.pop()).filter(isString)
           .filter(value => value.startsWith('/d.js?')).pop();
-        const nextUrl = `https://duckduckgo.com${nextRelativeUrl}`;
+        const nextUrl = nextRelativeUrl && `https://duckduckgo.com${nextRelativeUrl}`;
 
         results.forEach((result) => {
           const parsedResult = this.parseResult(result);
@@ -132,7 +132,7 @@ class EmailSpy {
     const snippet = Object.values(result).filter(isString)
       .map(value => value.replace('@<b>', '<b>@'))
       .map(value => value.replace(new RegExp(this.domain, 'ig'), this.domain))
-      .filter(value => value.includes(`<b>@${this.domain}</b>`))
+      .filter(value => value.includes(`@${this.domain}`))
       .pop()
       .replace(`<b>@${this.domain}</b>`, `@${this.domain}`);
     parsedResult.snippet = snippet;
