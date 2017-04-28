@@ -32,7 +32,6 @@ class Search extends React.Component {
             id="srch-term"
             type="text"
           />
-          <p>{this.state.value}</p>
           <div className="input-group-btn">
             <button
               className="btn btn-default"
