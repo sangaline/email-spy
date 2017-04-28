@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const env = require('./utils/env');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 
@@ -66,6 +67,12 @@ const options = {
       filename: 'popup.html',
       chunks: ['bootstrap', 'popup'],
     }),
+    new CopyWebpackPlugin([
+      {
+        from: path.join(__dirname, 'src', 'icons'),
+        to: 'icons',
+      },
+    ]),
     new WriteFilePlugin(),
   ],
 };
