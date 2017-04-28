@@ -1,0 +1,18 @@
+#app {
+  width: 400px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.input-group-btn .btn, .form-control {
+  height: 34px;
+}
+
+.glyphicon.spinning {
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1) rotate(360deg); }
+}

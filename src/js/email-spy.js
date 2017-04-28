@@ -28,7 +28,7 @@ class EmailSpy {
     return this.getFirstUrl()
       .then(url => this.abortIfInactive(url))
       .then(url => this.processAllPages(url))
-      .catch(AbortError)
+      .catch(AbortError, () => {})
       .catch(console.error)
       .then(() => {
         this.active = false;
