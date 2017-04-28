@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import logo from '../../img/logo.png';
 import EmailSpy from '../email-spy';
 import Search from './search';
 import Results from './results';
@@ -31,7 +32,7 @@ class Popup extends React.Component {
 
   render() {
     return (<div>
-      <h1>Email Spy</h1>
+      <img src={logo} alt="Email Spy" className="logo img-responsive center-block" />
       <Search
         defaultValue={this.state.emailSpy.domain}
         onClick={this.startNewSearch}

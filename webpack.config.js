@@ -45,7 +45,7 @@ const options = {
         loader: 'url-loader?limit=10000'
       },
       {
-        test: /\.(ttf|eot)$/,
+        test: /\.(ttf|eot|png)$/,
         loader: 'file-loader'
       },
     ],

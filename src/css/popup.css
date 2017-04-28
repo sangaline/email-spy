@@ -2,6 +2,11 @@
   width: 400px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 20px;
+}
+
+.logo {
+    width: 75%;
 }
 
 .input-group-btn .btn, .form-control {
