@@ -28,8 +28,6 @@ class Search extends React.Component {
             defaultValue={this.props.defaultValue}
             placeholder={this.props.placeholder}
             onChange={this.handleChange}
-            name="srch-term"
-            id="srch-term"
             type="text"
           />
           <div className="input-group-btn">

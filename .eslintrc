@@ -5,5 +5,8 @@
   "extends": "airbnb",
   "globals": {
     "chrome": true
+  },
+  "rules": {
+    "react/forbid-prop-types": 0
   }
 }
