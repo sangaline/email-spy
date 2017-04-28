@@ -6,6 +6,7 @@ const WriteFilePlugin = require('write-file-webpack-plugin');
 
 const options = {
   entry: {
+    bootstrap: 'bootstrap-loader',
     popup: path.join(__dirname, 'src', 'js', 'popup.js'),
   },
   output: {
@@ -34,6 +35,18 @@ const options = {
         test: /\.json$/,
         loader: 'json-loader',
       },
+      {
+        test:/bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,
+        loader: 'imports-loader?jQuery=jquery'
+      },
+      {
+        test: /\.(woff2?|svg)$/,
+        loader: 'url-loader?limit=10000'
+      },
+      {
+        test: /\.(ttf|eot)$/,
+        loader: 'file-loader'
+      },
     ],
   },
   node: {
@@ -51,7 +64,7 @@ const options = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'popup.html'),
       filename: 'popup.html',
-      chunks: ['popup'],
+      chunks: ['bootstrap', 'popup'],
     }),
     new WriteFilePlugin(),
   ],
