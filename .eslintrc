@@ -2,5 +2,8 @@
   "env": {
     "browser": true
   },
-  "extends": "airbnb"
+  "extends": "airbnb",
+  "globals": {
+    "chrome": true
+  }
 }
