@@ -89,6 +89,8 @@ class EmailSpy {
 
         results.forEach((result) => {
           const parsedResult = this.parseResult(result);
+          if (!parsedResult) return;
+
           const index = this.emails.map(
             object => object.email === parsedResult.email,
           ).indexOf(true);
@@ -139,7 +141,9 @@ class EmailSpy {
       String.raw`(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@${escapeRegEx(this.domain)}`,
     );
 
-    parsedResult.email = snippet.match(re).shift();
+    const matches = snippet.match(re);
+    if (!matches) return null;
+    parsedResult.email = matches[0];
 
     return parsedResult;
   }
