@@ -1,5 +1,5 @@
 #app {
-  width: 400px;
+  width: 600px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
@@ -7,6 +7,11 @@
 
 .logo {
     width: 75%;
+}
+
+.search-form {
+    margin: 0 auto;
+    width: 85%;
 }
 
 .input-group-btn .btn, .form-control {
@@ -21,3 +26,26 @@
     from { transform: scale(1) rotate(0deg); }
     to { transform: scale(1) rotate(360deg); }
 }
+
+.sources-container {
+    margin-bottom: 0px!important;
+}
+
+.sources-container .list-group {
+    margin-left: 25px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.accordion-toggle:after {
+    content: "\e114";
+    margin-right: 10px;
+    font-family: 'Glyphicons Halflings';
+    float: left;
+    color: gray;
+}
+
+.accordion-toggle.collapsed:after {
+    content: "\e080";
+}
+

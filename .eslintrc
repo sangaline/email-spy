@@ -7,6 +7,7 @@
     "chrome": true
   },
   "rules": {
+    "jsx-a11y/anchor-has-content": 0,
     "react/forbid-prop-types": 0
   }
 }

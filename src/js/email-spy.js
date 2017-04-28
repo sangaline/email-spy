@@ -95,18 +95,23 @@ class EmailSpy {
             object => object.email === parsedResult.email,
           ).indexOf(true);
 
+          const source = { url: parsedResult.url, snippet: parsedResult.snippet };
           if (index > -1) {
-            this.emails[index].urls.push(parsedResult.url);
+            // skip duplicates
+            const isDifferent = existingSource => existingSource.url !== source.url;
+            if (this.emails[index].sources.every(isDifferent)) {
+              this.emails[index].sources.push(source);
+            }
           } else {
             this.emails.push({
               email: parsedResult.email,
-              urls: [parsedResult.url],
+              sources: [source],
             });
           }
         });
 
-        this.emails.forEach(email => email.urls.sort());
-        this.emails.sort((a, b) => b.urls.length - a.urls.length);
+        this.emails.forEach(email => email.sources.sort((a, b) => a.url > b.url));
+        this.emails.sort((a, b) => b.sources.length - a.sources.length);
         this.callback();
 
         if (Object.keys(this.emails).length > this.maximumEmails) return null;
