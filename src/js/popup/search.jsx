@@ -21,7 +21,7 @@ class Search extends React.Component {
 
   render() {
     return (
-      <form className="navbar-form search-form block-center" role="search">
+      <form className="navbar-form search-form center-block" role="search">
         <div className="input-group add-on">
           <input
             className="form-control"
