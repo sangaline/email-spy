@@ -1,4 +1,4 @@
-![Email Spy](img/logo.svg)
+![Email Spy](img/logo.png)
 
 
 *If you need a more customized solution for lead-generation then you should check out [Intoli](https://intoli.com).*
