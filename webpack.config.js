@@ -8,6 +8,7 @@ const WriteFilePlugin = require('write-file-webpack-plugin');
 const options = {
   entry: {
     bootstrap: 'bootstrap-loader',
+    options: path.join(__dirname, 'src', 'js', 'options.js'),
     popup: path.join(__dirname, 'src', 'js', 'popup.js'),
   },
   output: {
@@ -60,6 +61,11 @@ const options = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(env.NODE_ENV),
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'src', 'options.html'),
+      filename: 'options.html',
+      chunks: ['bootstrap', 'options'],
     }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'popup.html'),
