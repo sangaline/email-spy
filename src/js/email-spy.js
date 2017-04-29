@@ -163,7 +163,7 @@ class EmailSpy {
 
   static extractPageJson(content) {
     try {
-      const json = content.match(/(\[{.*}\])/g).pop();
+      const json = content.match(/(\[{.*?}\])/g).pop();
       return JSON.parse(json);
     } catch (e) {
       return null;
