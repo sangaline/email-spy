@@ -1,4 +1,4 @@
-![Email Spy](img/logo.png)
+![Email Spy](img/logo.svg)
 
 # Email Spy
 
