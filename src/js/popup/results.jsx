@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Tooltip from 'rc-tooltip';
+import 'rc-tooltip/assets/bootstrap.css';
+
 
 class Result extends React.Component {
   constructor(props) {
@@ -23,18 +26,24 @@ class Result extends React.Component {
         <div id={collapseId} className="list-group sources-container panel-collapse collapse">
           <ul className="list-group">
             {this.props.sources.map(source => (
-              <li key={source.url} className="list-group-item">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={source.url}
-                  data-toggle="tooltip"
-                  data-placement="left"
-                  title={source.snippet}
-                >
-                  {source.url}
-                </a>
-              </li>
+              <Tooltip
+                key={source.url}
+                placement="top"
+                mouseEnterDelay={0.5}
+                mouseLeaveDelay={0}
+                trigger={['hover']}
+                overlay={<div dangerouslySetInnerHTML={{ __html: source.snippet }} />}
+              >
+                <li className="list-group-item">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={source.url}
+                  >
+                    {source.url}
+                  </a>
+                </li>
+              </Tooltip>
             ))}
           </ul>
         </div>
