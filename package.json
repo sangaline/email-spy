@@ -1,6 +1,6 @@
 {
   "name": "email-spy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Find all available email contacts for a domain with a single click.",
   "scripts": {
     "build": "node utils/build.js",
