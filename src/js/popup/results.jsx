@@ -8,7 +8,10 @@ import 'rc-tooltip/assets/bootstrap.css';
 class Result extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { test: 'hi' };
+
+    chrome.storage.sync.get('template', (template) => {
+      this.mailtoQuery = template.template ? template.template.query : '';
+    });
   }
 
   render() {
@@ -21,7 +24,13 @@ class Result extends React.Component {
           data-toggle="collapse"
           href={`#${collapseId}`}
         />
-        <a target="_blank" rel="noopener noreferrer" href={`mailto:${this.props.email}`}>{this.props.email}</a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`mailto:${this.props.email}${this.mailtoQuery}`}
+        >
+          {this.props.email}
+        </a>
         <span className="badge">{this.props.sources.length}</span>
         <div id={collapseId} className="list-group sources-container panel-collapse collapse">
           <ul className="list-group">
