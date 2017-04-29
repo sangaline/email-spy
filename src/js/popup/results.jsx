@@ -10,7 +10,7 @@ class Result extends React.Component {
     super(props);
 
     chrome.storage.sync.get('template', (template) => {
-      this.mailtoQuery = template.template ? template.template.query : '';
+      this.mailtoQuery = (template && template.template && template.template.query) || '';
     });
   }
 
