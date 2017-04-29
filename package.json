@@ -1,7 +1,7 @@
 {
   "name": "email-spy",
   "version": "0.0.1",
-  "description": "A web extension for finding email addresses for a domain.",
+  "description": "Find all available email contacts for a domain with a single click.",
   "scripts": {
     "build": "node utils/build.js",
     "lint": "eslint .",
