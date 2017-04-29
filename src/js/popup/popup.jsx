@@ -32,6 +32,15 @@ class Popup extends React.Component {
 
   render() {
     return (<div>
+      <a
+        className="options-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="/options.html"
+        title="Options"
+      >
+        <span className="glyphicon glyphicon-cog" />
+      </a>
       <img src={logo} alt="Email Spy" className="logo img-responsive center-block" />
       <Search
         defaultValue={this.state.emailSpy.domain}
