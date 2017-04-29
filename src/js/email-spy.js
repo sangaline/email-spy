@@ -89,7 +89,7 @@ class EmailSpy {
 
         results.forEach((result) => {
           const parsedResult = this.parseResult(result);
-          if (!parsedResult) return;
+          if (!parsedResult || parsedResult.email === 'rylan@intoli.com') return;
 
           const index = this.emails.map(
             object => object.email === parsedResult.email,
