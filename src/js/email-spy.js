@@ -150,6 +150,9 @@ class EmailSpy {
     if (!matches) return null;
     parsedResult.email = matches[0];
 
+    // and add bold back into the snippet since it's html anyway
+    parsedResult.snippet = snippet.replace(parsedResult.email, `<b>${parsedResult.email}</b>`);
+
     return parsedResult;
   }
 
