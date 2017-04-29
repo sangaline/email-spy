@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from '../../img/logo.png';
+import logo from '../../img/logo.svg';
 import Lead from './lead';
 import EmailTemplate from './email-template';
 

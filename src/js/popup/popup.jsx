@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import logo from '../../img/logo.png';
+import logo from '../../img/logo.svg';
 import EmailSpy from '../email-spy';
 import Search from './search';
 import Results from './results';
