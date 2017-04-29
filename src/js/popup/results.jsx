@@ -36,6 +36,7 @@ class Result extends React.Component {
               >
                 <li className="list-group-item">
                   <a
+                    className="source-url"
                     target="_blank"
                     rel="noopener noreferrer"
                     href={source.url}

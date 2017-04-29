@@ -41,6 +41,11 @@
     margin-bottom: 5px;
 }
 
+.source-url {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
 .accordion-toggle:after {
     content: "\e114";
     margin-right: 10px;
