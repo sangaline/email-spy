@@ -10,7 +10,7 @@ class EmailTemplate extends React.Component {
     this.handleBodyChange = this.handleBodyChange.bind(this);
     this.handleSave = this.handleSave.bind(this);
 
-    chrome.storage.sync.get('template', (template) => {
+    chrome.storage.local.get('template', (template) => {
       if (this.mounted) this.setState(template.template);
       else this.state = { ...this.state, ...template.template };
     });
@@ -33,7 +33,7 @@ class EmailTemplate extends React.Component {
 
     const { subject, body } = this.state;
     const query = `?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    chrome.storage.sync.set({ template: { subject, body, query } });
+    chrome.storage.local.set({ template: { subject, body, query } });
   }
 
   render() {
