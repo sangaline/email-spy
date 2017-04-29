@@ -68,7 +68,7 @@ Result.propTypes = {
 
 const Results = props => (
   <div>
-    <h4 className="text-center" data-toggle="popover" data-title="FUCK" data-content="heelllo">
+    <h4 className="text-center" data-toggle="popover">
       {props.emails.length} Results
     </h4>
     <ul className="list-group">
