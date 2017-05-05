@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import Tooltip from 'rc-tooltip';
 import 'rc-tooltip/assets/bootstrap.css';
 
+import createDOMPurify from 'dompurify';
+
+const DOMPurify = createDOMPurify(window);
+
 
 class Result extends React.Component {
   constructor(props) {
@@ -41,7 +45,13 @@ class Result extends React.Component {
                 mouseEnterDelay={0.5}
                 mouseLeaveDelay={0}
                 trigger={['hover']}
-                overlay={<div dangerouslySetInnerHTML={{ __html: source.snippet }} />}
+                overlay={<div
+                  // this is not dangerous because the HTML snippet is sanitized with DOMPurify
+                  // eslint-disable-next-line react/no-danger
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(source.snippet),
+                  }}
+                />}
               >
                 <li className="list-group-item">
                   <a
