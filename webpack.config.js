@@ -84,6 +84,24 @@ const options = {
 
 if (env.NODE_ENV === 'development') {
   options.devtool = 'cheap-module-eval-source-map';
+} else if (env.NODE_ENV === 'production') {
+  options.devtool = false;
+  options.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    compress: {
+      screw_ie8: true,
+      warnings: false,
+    },
+    mangle: {
+      screw_ie8: true,
+    },
+    output: {
+      comments: false,
+      screw_ie8: true,
+    },
+  }));
+  options.plugins.push(new webpack.LoaderOptionsPlugin({
+    minimize: true,
+  }));
 }
 
 module.exports = options;
