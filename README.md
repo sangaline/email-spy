@@ -18,6 +18,7 @@ Even if there's an easy to find contact email or form on a company's website, it
 - Finds email addresses with a single click.
 - Supports email templates to prepopulate email drafts.
 - Completely free and open source.
+- Easily extendable with React and ES6.
 
 ## Installation
 
